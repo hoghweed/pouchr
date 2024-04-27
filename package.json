@@ -1,0 +1,31 @@
+{
+  "name": "pouchr",
+  "version": "0.1.0",
+  "description": "A modern, Fastify driven, PouchDB server",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "build": "turbo build",
+    "check": "biome check .",
+    "dev": "turbo dev --parallel",
+    "format": "turbo format --continue --",
+    "format:fix": "turbo format --continue -- --write",
+    "lint": "turbo lint --continue --",
+    "lint:fix": "turbo lint --continue -- --apply",
+    "typecheck": "turbo typecheck"
+  },
+  "engines": {
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm",
+    "node": ">=20"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "^1.7.1"
+  },
+  "dependencies": {
+    "turbo": "^1.13.3",
+    "typescript": "^5.4.5"
+  }
+}

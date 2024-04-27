@@ -128,3 +128,20 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# dotenv environment variables file
+.env
+
+# Compiled app
+dist
+
+# TAP files
+out.tap
+junit-testresults.xml
+
+# Misc
+.DS_Store
+build
+
+# turbo
+.turbo

@@ -1,0 +1,60 @@
+{
+  "name": "pouchr",
+  "version": "0.1.0",
+  "description": "A modern, fast and lightweight PouchDB server built with Fastify",
+  "type": "module",
+  "main": "./dist/server.js",
+  "types": "./dist/server.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "typescript": "./src/server.ts",
+      "import": "./dist/server.js",
+      "require": "./dist/server.js"
+    }
+  },
+  "scripts": {
+    "prebuild": "pnpm lint && rimraf ./dist",
+    "build": "tsc -p ./tsconfig.json",
+    "clean": "rm -rf .turbo node_modules",
+    "dev": "run-p dev:start typecheck",
+    "dev:start": "tsx watch --inspect --env-file=.env src/server.ts",
+    "lint": "biome lint ./src",
+    "format": "biome format ./src ",
+    "start": "node --enable-source-maps dist/server.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoghweed/pouchr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hoghweed/pouchr/issues"
+  },
+  "keywords": [
+    "pouchdb",
+    "Fastify",
+    "server"
+  ],
+  "author": "Manuel S. Martone <manuel.martone@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@t3-oss/env-core": "^0.10.1",
+    "close-with-grace": "^1.3.0",
+    "fastify": "^4.26.2",
+    "fastify-plugin": "^4.5.1",
+    "hyperid": "^3.2.0",
+    "zod": "^3.23.4"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.7.1",
+    "@types/node": "^20.11.24",
+    "fastify-tsconfig": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^5.0.5",
+    "tsx": "^4.7.3",
+    "typescript": "^5.4.2"
+  }
+}
