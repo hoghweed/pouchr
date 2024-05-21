@@ -22,7 +22,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@biomejs/biome": "^1.7.1"
+    "@biomejs/biome": "^1.7.3"
   },
   "dependencies": {
     "turbo": "^1.13.3",

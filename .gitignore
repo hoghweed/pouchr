@@ -145,3 +145,6 @@ build
 
 # turbo
 .turbo
+
+public
+**/.vitepress/cache
