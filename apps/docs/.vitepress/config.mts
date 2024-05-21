@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Pouchr ",
+  base: '/pouchr/',
   description: "A modern, Fastify driven, PouchDB server",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
