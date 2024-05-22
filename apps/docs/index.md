@@ -3,16 +3,16 @@
 layout: home
 
 hero:
-  name: "Pouchr "
+  name: "Pouchr"
   text: "A modern, Fastify driven, PouchDB server"
-  tagline: My great project tagline
+  tagline: Serve PouchDB as a Fastify flavoured server, with all the benefits of Fastify!
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Introduction
+      link: /introduction
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Getting started
+      link: /getting-started
 
 features:
   - title: Feature A

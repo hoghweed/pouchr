@@ -1,5 +1,10 @@
-# pouchr
+# Pouchr
+
 A Fastify driven PouchDB Server
+
+Pouchr is a porting of the amzing [PouchDB Server](https://github.com/pouchdb/pouchdb-server) using a modern infrastructure and design using [Fastify](https://fastify.dev/).
+
+For a detailed documentation, please refer to the project [documentation](https://hoghweed.github.io/pouchr/)
 
 ## :warning: Disclaimer :warning:
 
