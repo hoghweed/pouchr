@@ -1,5 +1,4 @@
-import type { FastifyPluginAsync } from 'fastify';
-import fp from 'fastify-plugin';
+import type { FastifyInstance, FastifyPluginAsync } from "fastify";
 import PouchDB from 'pouchdb';
 
 export type PouchDbOptions = { 
@@ -20,8 +19,7 @@ export type PouchDbOptions = {
     prefix?: string | undefined;
 };
 
-const serverPlugin: FastifyPluginAsync<PouchDbOptions> = async (fastify, opts) => {
-
+export const plugin : FastifyPluginAsync<PouchDbOptions> = async (fastify: FastifyInstance , opts: PouchDbOptions) => {
     const db = new PouchDB(opts.name, { 
         auto_compaction: opts.autoCompact,
         prefix: opts.prefix
@@ -30,11 +28,6 @@ const serverPlugin: FastifyPluginAsync<PouchDbOptions> = async (fastify, opts) =
     fastify.decorate('pouch', db);
     fastify.decorateRequest('pouch', db);
 };
-
-export default fp<PouchDbOptions>(serverPlugin, {
-    name: '@pouchr/fastify-pouchdb',
-    fastify: '4.x'
-})
 
 declare module 'fastify' {
     export interface FastiFyInstance {

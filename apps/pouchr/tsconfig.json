@@ -1,12 +1,9 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig",
-    "extends": "fastify-tsconfig",
+    "extends": "../../tsconfig.json",
     "compilerOptions": {
         "outDir": "dist",
-        "rootDir": "src",
-        "sourceMap": true,
-        "noUnusedLocals": false,
-        "experimentalDecorators": true
+        "rootDir": "src"
     },
     "include": [
         "src/**/*.ts"

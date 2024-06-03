@@ -18,6 +18,9 @@ importers:
       '@biomejs/biome':
         specifier: ^1.7.3
         version: 1.7.3
+      fastify-tsconfig:
+        specifier: ^2.0.0
+        version: 2.0.0
 
   apps/docs:
     devDependencies:
@@ -30,6 +33,9 @@ importers:
 
   apps/pouchr:
     dependencies:
+      '@pouchr/fastify-pouchdb':
+        specifier: workspace:*
+        version: link:../../packages/fastify-pouchdb
       '@t3-oss/env-core':
         specifier: ^0.10.1
         version: 0.10.1(typescript@5.4.5)(zod@3.23.8)
@@ -45,6 +51,9 @@ importers:
       hyperid:
         specifier: ^3.2.0
         version: 3.2.0
+      tslib:
+        specifier: ^2.6.2
+        version: 2.6.2
       zod:
         specifier: ^3.23.8
         version: 3.23.8
@@ -82,6 +91,9 @@ importers:
       pouchdb:
         specifier: ^8.0.1
         version: 8.0.1
+      tslib:
+        specifier: ^2.6.2
+        version: 2.6.2
     devDependencies:
       '@types/pouchdb':
         specifier: ^6.4.2
@@ -1647,6 +1659,9 @@ packages:
 
   tr46@0.0.3:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
+
+  tslib@2.6.2:
+    resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
 
   tsx@4.11.2:
     resolution: {integrity: sha512-V5DL5v1BuItjsQ2FN9+4OjR7n5cr8hSgN+VGmm/fd2/0cgQdBIWHcQ3bFYm/5ZTmyxkTDBUIaRuW2divgfPe0A==}
@@ -3516,6 +3531,8 @@ snapshots:
       url-parse: 1.5.10
 
   tr46@0.0.3: {}
+
+  tslib@2.6.2: {}
 
   tsx@4.11.2:
     dependencies:
