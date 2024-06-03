@@ -27,6 +27,12 @@ export const plugin : FastifyPluginAsync<PouchDbOptions> = async (fastify: Fasti
 
     fastify.decorate('pouch', db);
     fastify.decorateRequest('pouch', db);
+
+    fastify.addHook('onClose', (fastify: FastifyInstance, done) => {
+        // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+        (fastify as any).db.close();
+        done();
+    });
 };
 
 declare module 'fastify' {
