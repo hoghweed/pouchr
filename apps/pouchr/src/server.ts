@@ -1,7 +1,7 @@
 import closeWithGrace from "close-with-grace"
 import { createApp } from "./app.js"
 
-const app = createApp({
+const app = await createApp({
   trustProxy: true,
 })
 

@@ -39,6 +39,9 @@ importers:
       '@t3-oss/env-core':
         specifier: ^0.10.1
         version: 0.10.1(typescript@5.4.5)(zod@3.23.8)
+      '@web-server-userland/fastify-request-id':
+        specifier: ^1.0.1
+        version: 1.0.1
       close-with-grace:
         specifier: ^1.3.0
         version: 1.3.0
@@ -708,6 +711,9 @@ packages:
   '@vueuse/shared@10.9.0':
     resolution: {integrity: sha512-Uud2IWncmAfJvRaFYzv5OHDli+FbOzxiVEQdLCKQKLyhz94PIyFC3CHcH7EDMwIn8NPtD06+PNbC/PiO0LGLtw==}
 
+  '@web-server-userland/fastify-request-id@1.0.1':
+    resolution: {integrity: sha512-1+xnLHSonnaGMB708CbLvTj4Ed/WWr08Zrw5Sc2JBR6vBn0OUWEpiPUDxlOQmvaYf7qFvm3gRTa6mShxiwiBjA==}
+
   abort-controller@3.0.0:
     resolution: {integrity: sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==}
     engines: {node: '>=6.5'}
@@ -985,6 +991,9 @@ packages:
 
   fast-uri@2.3.0:
     resolution: {integrity: sha512-eel5UKGn369gGEWOqBShmFJWfq/xSJvsgDzgLYC845GneayWvXBf0lJCBn5qTABfewy1ZDPoaR5OZCP+kssfuw==}
+
+  fastify-plugin@3.0.1:
+    resolution: {integrity: sha512-qKcDXmuZadJqdTm6vlCqioEbyewF60b/0LOFCcYN1B6BIZGlYJumWWOYs70SFYLDAH4YqdE1cxH/RKMG7rFxgA==}
 
   fastify-plugin@4.5.1:
     resolution: {integrity: sha512-stRHYGeuqpEZTL1Ef0Ovr2ltazUT9g844X5z/zEBFLG8RYlpDiOCIG+ATvYEp+/zmc7sN29mcIMp8gvYplYPIQ==}
@@ -2417,6 +2426,11 @@ snapshots:
       - '@vue/composition-api'
       - vue
 
+  '@web-server-userland/fastify-request-id@1.0.1':
+    dependencies:
+      fastify-plugin: 3.0.1
+      nanoid: 3.3.7
+
   abort-controller@3.0.0:
     dependencies:
       event-target-shim: 5.0.1
@@ -2792,6 +2806,8 @@ snapshots:
   fast-redact@3.5.0: {}
 
   fast-uri@2.3.0: {}
+
+  fastify-plugin@3.0.1: {}
 
   fastify-plugin@4.5.1: {}
 

@@ -1,4 +1,5 @@
 import pouchdb, {type PouchDbOptions} from "@pouchr/fastify-pouchdb";
+import requestId from "@web-server-userland/fastify-request-id";
 import Fastify, {
   type FastifyInstance,
   type FastifyServerOptions,
@@ -8,10 +9,13 @@ import configuration from "./plugins/configuration.js";
 
 // const uuid = hyperid({ urlSafe: true });
 
-export function createApp(opts: FastifyServerOptions = {}): FastifyInstance {
-  const app = Fastify(opts)
-  app.register(configuration)
-  app.register(pouchdb, {} as PouchDbOptions);
+export async function createApp(opts: FastifyServerOptions = {}): Promise<FastifyInstance> {
+  const app = Fastify(opts);
+  await app.register(configuration);
+  await app.register(pouchdb, {
+    name: 'pouchr'
+  } as PouchDbOptions);
+  await app.register(requestId.default);
 
   return app
 }
