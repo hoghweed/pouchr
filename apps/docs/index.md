@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Pouchr"
   text: "A modern, Fastify driven, PouchDB server"
-  tagline: Serve PouchDB as a Fastify flavoured server, with all the benefits of Fastify!
+  tagline: Serve PouchDB as a Fastify flavoured server
   actions:
     - theme: brand
       text: Introduction
